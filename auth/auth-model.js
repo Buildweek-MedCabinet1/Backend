@@ -14,7 +14,7 @@ function find(){
 
 function findBy(filter){
     return db('users').where(filter).orderBy('id');
-}
+} //never used
 
 async function add(user){
     try{

@@ -8,7 +8,8 @@ module.exports = {
     findById,
     addFavorite,
     getFavorite,
-    removeFavorite
+    removeFavorite,
+    findFavById
 }
 
 function get(){

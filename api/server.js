@@ -17,6 +17,6 @@ server.use(express.json());
 server.use('/api/',medCabRouter)
 server.use('/api/auth', authRouter)
 server.use('/api/auth/users', authenticate, secureRouter) //only for login/credential test
-server.use('/api/strains', strainsapiRouter)
+server.use('/api/auth/strains', strainsapiRouter)
 
 module.exports = server;

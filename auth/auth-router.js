@@ -18,7 +18,7 @@ router.get('/',(req,res)=>{
 router.post('/register',(req,res)=>{
     const credentials = req.body
     //add a way to check database for a similar name
-    checkDuplicate(credentials)
+    // checkDuplicate(credentials)
     if(isValid(credentials)) {
         const rounds = process.env.BCRYPT_ROUNDS || 8;
         const hash = bcryptjs.hashSync(credentials.password,rounds);
@@ -108,16 +108,17 @@ function validateBody (req,res,next) {
     }
 }
 
-function checkDuplicate (req,res,next) {
-    const username = req
-    const data = db('users')
+// function checkDuplicate (req,res,next) {
+//     const username = req
+    
     
 
-    console.log('Check duplicate username', username)
-    console.log("data",data)
+//     console.log('Check duplicate username', username)
+//     console.log("data",data.config.pool)
     
-}
+// }
 
+//FINISH WRITING TESTS 6/25/2020
 
 
 module.exports = router

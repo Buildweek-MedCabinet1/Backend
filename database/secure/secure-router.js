@@ -144,11 +144,11 @@ function validateDelete (req,res,next){
 
 function validateFavorites (req,res,next) {
     
-    const name = req.body.name;
+    const strain = req.body.name;
     const db_id = req.body.db_id;
     const user_id = req.body.user_id;
 
-    if(!name || !db_id || !user_id){
+    if(!strain || !db_id || !user_id){
         next(res.status(400).json({message:"Include all data to add a favorite:  strain, user_id, db_id"}))
     } else{
         next()
